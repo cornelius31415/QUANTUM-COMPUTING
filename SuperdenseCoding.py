@@ -6,6 +6,12 @@ Created on Thu Jun  6 17:14:36 2024
 @author: cornelius
 """
 
+# -----------------------------------------------------------------------------
+#                               SUPERDENSE CODING
+# -----------------------------------------------------------------------------
+
+
+
 """
                             SUPERDENSE CODING
              
@@ -36,12 +42,12 @@ Created on Thu Jun  6 17:14:36 2024
 
 """
 
-https://pypi.org/project/qiskit/#history
-
-qiskit                            0.46.0
-qiskit-aer                        0.14.2
-qiskit-ibm-runtime                0.23.0
-qiskit-terra                      0.46.0
+                    https://pypi.org/project/qiskit/#history
+                    
+                    qiskit                            0.46.0
+                    qiskit-aer                        0.14.2
+                    qiskit-ibm-runtime                0.23.0
+                    qiskit-terra                      0.46.0
 
 """
 
@@ -51,19 +57,23 @@ from qiskit import QuantumCircuit, Aer, execute
 from qiskit.visualization import circuit_drawer
 from qiskit.visualization import plot_histogram
 
-# ---------------           WARNINGS             --------------------
-#                   Suppress or reset warnings
+# -----------------------------------------------------------------------------
+#                               WARNINGS
+# -----------------------------------------------------------------------------
+
+#                       Suppress or reset warnings
 
 warnings.filterwarnings("ignore")
 #warnings.resetwarnings()
-# -------------------------------------------------------------------
+
+# -----------------------------------------------------------------------------
+#                             QUANTUM PART
+# -----------------------------------------------------------------------------
 
 # Bits we want to send
 
 bit1 = 1
 bit2 = 0
-
-# ----------------------      QUANTUM PART       ---------------------------
 
 # Create a Quantum Circuit with 2 qubits and 2 classical bits
 qc = QuantumCircuit(2,2)
@@ -93,12 +103,16 @@ qc.measure(1,0)    # intuitively i would measure q0 and store it in c0 but
                    # that somehow flips the order of the bits  
 
 
-# ----------------------             VISUALIZATION               -----------------------
+# -----------------------------------------------------------------------------
+#                             VISUALIZATION
+# -----------------------------------------------------------------------------
 
 qc.draw('mpl')
 print(qc)
 
-#-----------------------    EXECUTION ON QUANTUM SIMULATOR    -------------------------
+# -----------------------------------------------------------------------------
+#                        EXECUTION ON SIMULATOR
+# -----------------------------------------------------------------------------
 
 
 # Parameters for execution on simulator
