@@ -34,6 +34,17 @@ Created on Thu Jun  6 17:14:36 2024
                       
 """
 
+"""
+
+https://pypi.org/project/qiskit/#history
+
+qiskit                            0.46.0
+qiskit-aer                        0.14.2
+qiskit-ibm-runtime                0.23.0
+qiskit-terra                      0.46.0
+
+"""
+
 
 import warnings
 from qiskit import QuantumCircuit, Aer, execute
