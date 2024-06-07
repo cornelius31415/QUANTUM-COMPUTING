@@ -6,6 +6,7 @@ Created on Thu Jun  6 17:14:36 2024
 @author: cornelius
 """
 
+
 # -----------------------------------------------------------------------------
 #                               SUPERDENSE CODING
 # -----------------------------------------------------------------------------
@@ -100,7 +101,13 @@ qc.cx(0,1)
 qc.h(0)
 qc.measure(0,1)    # weird internal structure in the classical register
 qc.measure(1,0)    # intuitively i would measure q0 and store it in c0 but
-                   # that somehow flips the order of the bits  
+                   # that somehow flips the order of the bits
+                   #In Qiskit, the order of the classical bits in the 
+                   #measurement output follows little-endian format. 
+                   #This means the least significant bit 
+                   #(the one corresponding to qubit 0) is on the right, 
+                   #and the most significant bit (the one corresponding to qubit 1) 
+                   #is on the left.
 
 
 # -----------------------------------------------------------------------------
